@@ -1,6 +1,8 @@
 import React from "react";
 import "./App.css";
 
+import Images from "./components/images";
+
 function App() {
   return (
     <div id="root">
@@ -13,9 +15,7 @@ function App() {
                 Infinite Scroll Unsplash Code Challenge
               </h1>
             </div>
-            <div className="images">
-
-            </div>
+            <Images />
           </div>
         </div>
       </div>
