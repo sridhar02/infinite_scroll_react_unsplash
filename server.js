@@ -3,6 +3,7 @@ const config = require("universal-config");
 const Unsplash = require("unsplash-js").default;
 const toJson = require("unsplash-js").toJson;
 const express = require("express");
+var cors = require("cors");
 
 const unsplash = new Unsplash({
   applicationId: config.get("APPLICATION_ID"),
@@ -11,6 +12,8 @@ const unsplash = new Unsplash({
 });
 
 const app = express();
+
+app.use(cors());
 
 app.get("/api/photos", (req, res) => {
   unsplash.photos
